@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Lab02.CalculatingUnit">
+    <Position X="6.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAABAAAAAAAABAA=</HashCode>
+      <FileName>CalculatingUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab02.MatrixCalculator">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAIAAAAAAAQCAAAAAACAAABAA=</HashCode>
+      <FileName>MatrixCalculator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="calcUnit" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Lab02.AngularMomentumUnit">
+    <Position X="5.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAABAA=</HashCode>
+      <FileName>AngularMomentumUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab02.EntropyUnit">
+    <Position X="7" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAABAA=</HashCode>
+      <FileName>EntropyUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab02.CorrelationUnit">
+    <Position X="8.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAABAA=</HashCode>
+      <FileName>CorrelationUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab02.ContrastUnit">
+    <Position X="3.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAABAA=</HashCode>
+      <FileName>ContrastUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab02.AllCalculatingUnits">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAABABQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AllCalculatingUnits.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="instance" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="units" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Lab02.FileObject">
+    <Position X="11.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIAAAAAAAAAAAAAAAICAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FileObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab02.ImageFile">
+    <Position X="10.5" Y="4" Width="1.5" />
+    <InheritanceLine Type="Lab02.FileObject" FixedToPoint="true">
+      <Path>
+        <Point X="12.25" Y="3.132" />
+        <Point X="12.25" Y="3.846" />
+        <Point X="11.375" Y="3.846" />
+        <Point X="11.375" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAIAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>ImageFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab02.FileFolder">
+    <Position X="12.5" Y="4" Width="1.5" />
+    <AssociationLine Name="children" Type="Lab02.FileObject" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.562" Y="4" />
+        <Point X="13.562" Y="2.938" />
+        <Point X="13" Y="2.938" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AIIAAAAAAAAAAAQAAAIAAAAAAACAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>FileFolder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="children" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Lab02.FileTree">
+    <Position X="13.25" Y="1" Width="1.5" />
+    <AssociationLine Name="root" Type="Lab02.FileFolder">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.509" Y="0.11" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FileTree.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="root" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Lab02.BmpImage">
+    <Position X="8.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BmpImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab02.PngImage">
+    <Position X="10.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PngImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab02.JpegImage">
+    <Position X="12.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>JpegImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
