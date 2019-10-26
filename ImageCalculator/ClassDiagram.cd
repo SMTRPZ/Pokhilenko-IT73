@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Lab02.CalculatingUnit">
+  <Class Name="ImageCalculator.CalculatingUnit">
     <Position X="6.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAABAAAAAAAABAA=</HashCode>
       <FileName>CalculatingUnit.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Lab02.MatrixCalculator">
+  <Class Name="ImageCalculator.MatrixCalculator">
     <Position X="9.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAQAAAAAAIAAAAAAAQCAAAAAACAAABAA=</HashCode>
@@ -17,35 +17,35 @@
       <Field Name="calcUnit" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Lab02.AngularMomentumUnit">
+  <Class Name="ImageCalculator.AngularMomentumUnit">
     <Position X="5.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAABAA=</HashCode>
       <FileName>AngularMomentumUnit.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Lab02.EntropyUnit">
+  <Class Name="ImageCalculator.EntropyUnit">
     <Position X="7" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAABAA=</HashCode>
       <FileName>EntropyUnit.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Lab02.CorrelationUnit">
+  <Class Name="ImageCalculator.CorrelationUnit">
     <Position X="8.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAABAA=</HashCode>
       <FileName>CorrelationUnit.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Lab02.ContrastUnit">
+  <Class Name="ImageCalculator.ContrastUnit">
     <Position X="3.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAABAA=</HashCode>
       <FileName>ContrastUnit.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Lab02.AllCalculatingUnits">
+  <Class Name="ImageCalculator.AllCalculatingUnits">
     <Position X="3" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAgAAAAAAAAAAAAAAABABQAAAAAAAAAAAAAAA=</HashCode>
@@ -58,16 +58,16 @@
       <Field Name="units" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Lab02.FileObject">
+  <Class Name="ImageCalculator.FileObject">
     <Position X="11.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIIAAAAAAAAAAAAAAAICAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>FileObject.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Lab02.ImageFile">
+  <Class Name="ImageCalculator.ImageFile">
     <Position X="10.5" Y="4" Width="1.5" />
-    <InheritanceLine Type="Lab02.FileObject" FixedToPoint="true">
+    <InheritanceLine Type="ImageCalculator.FileObject" FixedToPoint="true">
       <Path>
         <Point X="12.25" Y="3.132" />
         <Point X="12.25" Y="3.846" />
@@ -80,9 +80,9 @@
       <FileName>ImageFile.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Lab02.FileFolder">
+  <Class Name="ImageCalculator.FileFolder">
     <Position X="12.5" Y="4" Width="1.5" />
-    <AssociationLine Name="children" Type="Lab02.FileObject" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="children" Type="ImageCalculator.FileObject" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="13.562" Y="4" />
         <Point X="13.562" Y="2.938" />
@@ -97,9 +97,9 @@
       <Field Name="children" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Lab02.FileTree">
+  <Class Name="ImageCalculator.FileTree">
     <Position X="13.25" Y="1" Width="1.5" />
-    <AssociationLine Name="root" Type="Lab02.FileFolder">
+    <AssociationLine Name="root" Type="ImageCalculator.FileFolder">
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="-0.509" Y="0.11" />
       </MemberNameLabel>
@@ -112,21 +112,21 @@
       <Field Name="root" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Lab02.BmpImage">
+  <Class Name="ImageCalculator.BmpImage">
     <Position X="8.75" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BmpImage.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Lab02.PngImage">
+  <Class Name="ImageCalculator.PngImage">
     <Position X="10.5" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PngImage.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Lab02.JpegImage">
+  <Class Name="ImageCalculator.JpegImage">
     <Position X="12.25" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
