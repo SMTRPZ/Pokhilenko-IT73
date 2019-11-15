@@ -13,15 +13,19 @@ namespace ImageCalculator
         private AllCalculatingUnits()
         {
             units = Assembly.GetAssembly(typeof(CalculatingUnit)).GetTypes()
-                .Where(type => type.IsClass && !type.IsAbstract && type.IsSubclassOf(typeof(CalculatingUnit)))
+                .Where(type => type.IsSubclassOf(typeof(CalculatingUnit)) && type.IsClass && !type.IsAbstract)
                 .Select(type => (CalculatingUnit)Activator.CreateInstance(type))
-                .ToDictionary(unit => unit.GetName());
+                .ToDictionary(unit => unit.GetName()); //???
         }
 
         public static AllCalculatingUnits GetInstance() => instance ?? (instance = new AllCalculatingUnits());
 
-        public CalculatingUnit GetUnit(string name) => units.ContainsKey(name) ?
-            units[name] :
-            throw new Exception($"Не удалось найти вычислительный узел для параметра \"{name}\".");
+        public CalculatingUnit GetUnit(string name)
+        {
+            if(!units.ContainsKey(name))
+                throw new Exception($"Не удалось найти вычислительный узел для параметра \"{name}\".");
+
+            return units[name];
+        }
     }
 }

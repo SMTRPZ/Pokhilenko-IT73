@@ -5,14 +5,11 @@ namespace ImageCalculator
 {
     public abstract class ImageFile : FileObject
     {
-        public ImageFile(string path) : base(path)
-        {
-
-        }
+        public ImageFile(string path) : base(path) { }
 
         public FileStream GetFileStream() => new FileStream(path, FileMode.Open);
 
-        public override void Add(FileObject fileObj)
+        public override void Add(FileObject fileObj) //???
         {
             throw new NotSupportedException("Нельзя добавить ребёнка файлу.");
         }

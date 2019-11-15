@@ -16,20 +16,25 @@ namespace ImageCalculator
                 try
                 {
                     Console.WriteLine("Введите путь к папке, с которой необходимо начинать поиск изображений:");
-                    var path = Console.ReadLine();
-                    var tree = new FileTree(path);
+                    var path = Console.ReadLine(); //Start path better make in C?
+                    var tree = new FileTree(Console.ReadLine());
+
                     tree.Accept(calc);
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("Файлы с параметрами были созданы.");
-                    Console.ResetColor();
+
+                    WriteColorToConsole("Файлы с параметрами были созданы.", ConsoleColor.Green);
                 }
                 catch (Exception e)
                 {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine(e.Message);
-                    Console.ResetColor();
+                    WriteColorToConsole(e.Message, ConsoleColor.Red);
                 }
             }
+        }
+
+        private static void WriteColorToConsole(string data, ConsoleColor color)
+        {
+            Console.ForegroundColor = color;
+            Console.WriteLine(data);
+            Console.ResetColor();
         }
     }
 }

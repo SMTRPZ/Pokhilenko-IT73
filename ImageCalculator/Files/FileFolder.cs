@@ -14,20 +14,18 @@ namespace ImageCalculator
 
         public virtual string GetUnitName()
         {
-            string unitName = DefaultUnitName;
             var settings = Directory.GetFiles(path, "settings.txt");
-            if (settings.Length != 0) unitName = string.Join("", File.ReadAllLines(settings[0]));
-            return unitName;
+
+            return settings.Length != 0 
+                ? string.Join("", File.ReadAllLines(settings[0])) 
+                : DefaultUnitName;
         }
 
         public override void Accept(MatrixCalculator mcalc)
         {
             mcalc.ChangeUnit(AllCalculatingUnits.GetInstance().GetUnit(GetUnitName()));
 
-            foreach (var fileObject in children)
-            {
-                fileObject.Accept(mcalc);
-            }
+            children.ForEach(c => c.Accept(mcalc));
         }
 
         public override void Add(FileObject fileObj) => children.Add(fileObj);

@@ -8,7 +8,7 @@ namespace ImageCalculator
         {
             CheckMatrix(matrix);
             return 1.477f;
-            throw new NotImplementedException();
+            throw new NotImplementedException(); //Why we need it
         }
 
         public override string GetName() => "ASM";

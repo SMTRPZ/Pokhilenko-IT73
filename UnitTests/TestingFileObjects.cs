@@ -16,7 +16,7 @@ namespace UnitTests
         public TestingFileObjects()
         {
             _imageFiles = Assembly.GetAssembly(typeof(ImageFile)).GetTypes()
-                .Where(type => type.IsClass && !type.IsAbstract && type.IsSubclassOf(typeof(ImageFile)))
+                .Where(type => type.IsSubclassOf(typeof(ImageFile)) && type.IsClass && !type.IsAbstract)
                 .Select(type => (ImageFile)Activator.CreateInstance(type, "")).ToArray();
             
             _unitsNames = ((Dictionary<string, CalculatingUnit>)typeof(AllCalculatingUnits)
@@ -33,7 +33,7 @@ namespace UnitTests
         [TestMethod]
         public void ImageFiles_GetChild_NotSupportedException()
         {
-            foreach (var imageFile in _imageFiles)
+            foreach (var imageFile in _imageFiles)//Check base class
             {
                 Assert.ThrowsException<NotSupportedException>(() => imageFile.GetChild(0));
             }
@@ -42,13 +42,13 @@ namespace UnitTests
         [TestMethod]
         public void ImageFiles_Add_NotSupportedException()
         {
-            foreach (var imageFile in _imageFiles)
+            foreach (var imageFile in _imageFiles)//Check base class
             {
                 Assert.ThrowsException<NotSupportedException>(() => imageFile.Add(null));
             }
         }
 
-        private TestFileFolder GetTestTree()
+        private TestFileFolder GetTestTree() 
         {
             var folder = new TestFileFolder(null);
 

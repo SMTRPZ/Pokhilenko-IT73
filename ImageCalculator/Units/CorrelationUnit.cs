@@ -8,7 +8,7 @@ namespace ImageCalculator
         {
             CheckMatrix(matrix);
             return 6.0017f;
-            throw new NotImplementedException();
+            throw new NotImplementedException(); //Why
         }
 
         public override string GetName() => "COR";

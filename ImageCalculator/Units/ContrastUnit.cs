@@ -8,7 +8,7 @@ namespace ImageCalculator
         {
             CheckMatrix(matrix);
             return 11.25f;
-            throw new NotImplementedException();
+            throw new NotImplementedException(); //Why
         }
 
         public override string GetName() => "CON";

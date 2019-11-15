@@ -1,11 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCalculator", "ImageCalculator\ImageCalculator.csproj", "{E384136C-4E04-4F4E-A22F-A031CE2F9C09}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{B1CA74A1-8318-47AF-A371-E48DC05E01EB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E384136C-4E04-4F4E-A22F-A031CE2F9C09} = {E384136C-4E04-4F4E-A22F-A031CE2F9C09}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

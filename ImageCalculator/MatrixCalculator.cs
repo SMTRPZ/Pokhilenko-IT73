@@ -17,8 +17,7 @@ namespace ImageCalculator
 
             //*Считаем матрицу специально для этого типа файла*
 
-            var parameter = calcUnit.ComputeParameter(matrix);
-            PrintToFile(img, calcUnit.GetName(), parameter);
+            PrintToFile(img, calcUnit.GetName(), calcUnit.ComputeParameter(matrix));
         }
 
         public void CalculatePng(PngImage img)
@@ -27,8 +26,7 @@ namespace ImageCalculator
 
             //*Считаем матрицу специально для этого типа файла*
 
-            var parameter = calcUnit.ComputeParameter(matrix);
-            PrintToFile(img, calcUnit.GetName(), parameter);
+            PrintToFile(img, calcUnit.GetName(), calcUnit.ComputeParameter(matrix));
         }
 
         public void CalculateJpeg(JpegImage img)
@@ -37,15 +35,14 @@ namespace ImageCalculator
 
             //*Считаем матрицу специально для этого типа файла*
 
-            var parameter = calcUnit.ComputeParameter(matrix);
-            PrintToFile(img, calcUnit.GetName(), parameter);
+            PrintToFile(img, calcUnit.GetName(), calcUnit.ComputeParameter(matrix));
         }
 
         private void PrintToFile(ImageFile file, string name, float parameter)
         {
             var newFilePath = Path.Combine(Path.GetDirectoryName(file.path), Path.GetFileNameWithoutExtension(file.path) + "_out.txt");
-            var text = name + " = " + parameter;
-            File.WriteAllText(newFilePath, text);
+
+            File.WriteAllText(newFilePath, $"{name} = {parameter}");
         }
     }
 }

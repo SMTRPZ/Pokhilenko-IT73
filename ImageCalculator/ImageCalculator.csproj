@@ -8,10 +8,11 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>ImageCalculator</RootNamespace>
     <AssemblyName>ImageCalculator</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +33,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -43,20 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AllCalculatingUnits.cs" />
-    <Compile Include="AngularMomentumUnit.cs" />
-    <Compile Include="BmpImage.cs" />
-    <Compile Include="CalculatingUnit.cs" />
-    <Compile Include="ContrastUnit.cs" />
-    <Compile Include="CorrelationUnit.cs" />
-    <Compile Include="EntropyUnit.cs" />
-    <Compile Include="FileFolder.cs" />
-    <Compile Include="FileObject.cs" />
-    <Compile Include="FileTree.cs" />
-    <Compile Include="ImageFile.cs" />
-    <Compile Include="JpegImage.cs" />
+    <Compile Include="Units\AllCalculatingUnits.cs" />
+    <Compile Include="Units\AngularMomentumUnit.cs" />
+    <Compile Include="Files\Images\BmpImage.cs" />
+    <Compile Include="Units\CalculatingUnit.cs" />
+    <Compile Include="Units\ContrastUnit.cs" />
+    <Compile Include="Units\CorrelationUnit.cs" />
+    <Compile Include="Units\EntropyUnit.cs" />
+    <Compile Include="Files\FileFolder.cs" />
+    <Compile Include="Files\FileObject.cs" />
+    <Compile Include="Files\FileTree.cs" />
+    <Compile Include="Files\Images\ImageFile.cs" />
+    <Compile Include="Files\Images\JpegImage.cs" />
     <Compile Include="MatrixCalculator.cs" />
-    <Compile Include="PngImage.cs" />
+    <Compile Include="Files\Images\PngImage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

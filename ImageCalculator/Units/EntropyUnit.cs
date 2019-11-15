@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ImageCalculator
 {
@@ -11,7 +8,7 @@ namespace ImageCalculator
         {
             CheckMatrix(matrix);
             return -1.98f;
-            throw new NotImplementedException();
+            throw new NotImplementedException(); //Why
         }
 
         public override string GetName() => "ENT";
